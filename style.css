@@ -161,7 +161,7 @@ nav ul a {
     position: absolute;
     width: 80%;
     height: 80%;
-    background-image: url(photo/math_dev.jpg); 
+    background-image: url(math_dev.jpg); 
     filter: blur(40px); 
     z-index: -1; }
 #contenu1{
