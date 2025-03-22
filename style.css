@@ -161,11 +161,10 @@ nav ul a {
     position: absolute;
     width: 80%;
     height: 80%;
-    background-image: url(math_dev.jpg); 
-    filter: blur(40px); 
+    background-color: #ffffff; 
     z-index: -1; }
 #contenu1{
-    color: beige;
+    color: rgb(8, 8, 8);
 }
 
 #DataScience{
@@ -319,11 +318,17 @@ button:hover {
         flex-direction: column;
         text-align: center;
     }
+
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
     .contenu {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+    .container{
         flex-direction: column-reverse;
         text-align: center;
         gap: 20px;
@@ -340,5 +345,18 @@ button:hover {
     }
     .project {
         max-width: 100%;
+    }
+    .sousContenu h2 ,.sousContenu p,.sousContenu .highlight{
+        font-size: 20px;}
+        
+    button {
+        width: 20%;
+        padding: 15px;
+        background: #00d1d1;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        font-size: 13px;
+        cursor: pointer;
     }
 }
