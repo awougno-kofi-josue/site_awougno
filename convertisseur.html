@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur d'age</title>
+    <style>
+        body{
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        form{
+            margin: 0 auto;
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label{
+            font-size: 1.2em;
+            color: #333;
+        }
+        input{
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button{
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #444;
+        }
+        p{
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <p id="requis"></p>
+     <form action="traitement.php"  method="post">
+        <label for="date">Saisir une date  (JJ-MM-AAAA): </label>
+        <input type="date" id="date" name="date">
+        <br>  <br>
+        <button onclick="event.preventDefault(); afficherdate();"> AFFICHAGE </button> <br>
+
+        <p id="jour"></p>
+        <p id="mois"></p>
+        <p id="annee"></p>
+        <button onclick="event.preventDefault(); difference();"> Différence de jours </button>
+        <p id="diff"></p>
+    </form>
+    <script>
+        function afficherdate(){
+            let dateInput= document.getElementById('date').value;
+            let Vraidate= dateInput.split("-");
+            let jour=Vraidate[2];
+            let mois=Vraidate[1];   
+            let annee=Vraidate[0];
+            document.getElementById("jour").innerText = "Jour : " + jour;
+            document.getElementById("mois").innerText = "Mois : " + mois;
+            document.getElementById("annee").innerText = "Année : " + annee; 
+        }
+        function difference(){
+            let dateInput= document.getElementById('date').value;
+            let Vraidate= dateInput.split("-");
+            let jour=Vraidate[2];
+            let mois=Vraidate[1]-1;
+            let annee=Vraidate[0];
+            let dateAffiche= new Date(annee,mois,jour);
+            let dateActuelle=new Date();
+            let diff=Math.round((dateActuelle-dateAffiche)/(1000*60*60*24));
+            document.getElementById('diff').innerText='La différence en jour de la date que vous avez saisi et la date actuelle arrondi à un dixième près est : '+diff;
+        }
+    </script>
+
+</body>
+</html>

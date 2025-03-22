@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de prêt</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            text-align: center;
+        }
+        form{
+            margin: 0 auto;
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label{
+            font-size: 1.2em;
+            color: #333;
+        }
+        input{
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button{
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #444;
+        }
+        p{
+            font-size: 1.2em;
+            color: #333;
+        }   
+    </style>
+</head>
+<body>
+    <h2>Calculateur de prêt hypothécaire</h2>
+    <form action="" method="dialog">
+        <label for="MontantPret" class="labe">Entrez le montant du prêt :</label>
+        <input type="number" id="MontantPret"name="MontantPret" placeholder="            Montant du prêt "><br> <br>
+        <label for="TauxInteret" class="labe">Entrez le taux d'interêt annuel : </label>
+        <input type="number" id="TauxInteret" name="TauxInteret" placeholder="           Taux d'interêt"><br> <br>
+        <label for="Duree" class="labe">Durée du prêt en année :</label>
+        <input type="number" name="Duree" id="Duree"  placeholder="          Durée en annéé" min="1"><br><br>
+        <button onclick="calculateur()">CALCULER</button>
+    </form>
+    <p id="affichage"></p>
+
+    <script>
+        function calculateur(){
+            let MontantDuPret=parseFloat(document.getElementById('MontantPret').value);
+            let TauxDinteret=parseFloat(document.getElementById('TauxInteret').value);
+            let DureePret=parseInt(document.getElementById('Duree').value);
+           // Validation des entrées
+           if (isNaN(MontantDuPret) || MontantDuPret <= 0) {
+                alert("Le montant du prêt doit être plus grand que 1.");
+                return;
+            }
+            if (isNaN(TauxDinteret) || TauxDinteret <= 0) {
+                alert("Le taux d'intérêt annuel doit être valide.");
+                return;
+            }
+            if (isNaN(DureePret) || DureePret <= 0) {
+                alert("La durée du prêt doit être valide.");
+                return;
+            }
+            const r = (TauxDinteret / 100) / 12;
+            const n=DureePret*12
+            const M=MontantDuPret*(r*Math.pow((1+r),n))/(Math.pow((1+r),n)-1);
+            const Montant=M.toFixed(2)
+            document.getElementById('affichage').innerText="Le montant à payer mensuellement s'élève à "+M.toFixed(2)+ "€ \n Sur une durée de "+n+' mois'   
+            document.getElementById('MontantPret').value='';    
+            document.getElementById('TauxInteret').value='';
+            document.getElementById('Duree').value='';
+         }   
+    </script>
+</body>
+</html>

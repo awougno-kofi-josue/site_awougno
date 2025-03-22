@@ -1,0 +1,344 @@
+*{
+    font-family:sans-serif;
+    font-size: 18px;
+}
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0; 
+    background-color: rgba(236, 247, 250, 0.767);
+}
+footer{
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px 5px;
+    padding: 5px 1px;
+    background-color: rgba(59, 55, 59, 0.5);
+}header {
+    display: flex;
+    justify-content: space-between; /* Profile à gauche, menu à droite */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(95, 91, 95, 0.575);
+}
+
+.profile {
+    color: rgba(7, 7, 248, 0.493);
+    display: flex;
+    flex-direction: column; /* Met l'image au-dessus du nom */
+    align-items: center; /* Centre le contenu */
+}
+
+.profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile h4 {
+    margin: 5px 0;
+    font-size: 24px;
+    color: #070808;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+nav ul a:hover{
+    color: #14a9ee;
+}
+nav ul a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: normal;
+}
+/* Style du  main*/
+.contenu img {
+    text-align: center;
+    width: 400px;
+    height: 50%;
+    border-radius: 5%;
+    object-fit: cover;
+}
+.contenu{
+    display: flex;
+    justify-content: space-between; 
+    gap: 40px;
+    padding:3% 8%
+   
+}
+.sousContenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    padding:0 40px;
+    
+    
+}
+.sousContenu h2 ,.sousContenu p,.sousContenu .highlight{
+    font-size: 32px;
+
+    
+}
+.contenu h4{
+    font-size: 24px;
+    line-height: 1.8;
+    text-indent: 40px;
+    text-align: justify;
+    font-weight: normal;
+}
+.bouton{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: darkcyan;
+    box-shadow: 1px 1px 1px 1px;
+    border: 1px solid #d6cbcb;
+    border-radius: 10px;
+} .bouton:hover{
+    background-color: #14a9ee;
+}
+.bouton a{
+    text-decoration: none;
+    text-align: justify;
+    color: #ffffff;
+}
+#contact{
+    position: relative;
+    padding-left: 40%;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo img{
+    width: 20px;
+    height: 20px;
+}
+#reseau{
+    width: 280px;
+    height: 200px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+#item{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+  align-items: center;
+}
+.nom{
+    text-align: center;
+    font-size: 24px;
+    color: aqua;
+}
+#profile{
+    border: 4px solid aqua ;
+    width: 340px;
+    height: 500px;
+    border-radius: 100%;
+}
+.details{
+    font-size: 20px;
+    line-height: 1.5;
+    text-indent: 40px;
+    text-align: justify;
+    font-weight: normal;
+}
+.backgr {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(photo/math_dev.jpg); 
+    filter: blur(40px); 
+    z-index: -1; }
+#contenu1{
+    color: beige;
+}
+
+#DataScience{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+
+}
+.projects {
+
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.project {
+    background: rgba(204, 198, 198, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 290px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.project a{
+    text-decoration: none;
+    color: #000fff
+}
+
+.voir {
+    width: 100px;
+    height: 35px;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: rgba(13, 13, 14, 0.664);
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    margin-top: 10px;
+}
+.voir a{
+    text-decoration: none;
+    color: white;
+}
+
+.voir:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    background-color: #14a9ee;
+}
+
+#DataScience {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+}
+.skills-box {
+    background: white;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.skill {
+    margin: 15px 0;
+}
+.bar {
+    background: #ddd;
+    height: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progress {
+    background: #00d1d1;
+    height: 100%;
+}
+
+.contact-container {
+    width: 100%;
+    margin: 10% ;
+    padding: 20%;
+    font-family: Arial, sans-serif;
+    background: #11111177;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    align-items: center;
+}
+.contact-container h2, .contact-container span ,.nom {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+.highlight {
+    color: #00d1d1;
+    font-weight: bold;
+}
+form {
+    background: rgba(0, 0, 0, 0.356);
+    padding: 10%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+.input-box {
+    width: 48%;
+}
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+button {
+    width: 20%;
+    padding: 15px;
+    background: #00d1d1;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+button:hover {
+    background: #14a9ee;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contenu {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+    .projects {
+        text-align: center;
+    }
+    .contenu img {
+        width: 80%;
+        max-width: 300px;
+    }
+    .sousContenu {
+        text-align: center;
+    }
+    .project {
+        max-width: 100%;
+    }
+}
