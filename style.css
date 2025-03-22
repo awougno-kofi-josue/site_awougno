@@ -161,9 +161,12 @@ nav ul a {
     position: absolute;
     width: 80%;
     height: 80%;
-    background-color: #ffffff; 
+    background-image: url(math_dev.jpg); 
+    filter: blur(40px); 
     z-index: -1; }
 #contenu1{
+    color: beige;
+
     color: rgb(8, 8, 8);
 }
 
@@ -348,7 +351,7 @@ button:hover {
     }
     .sousContenu h2 ,.sousContenu p,.sousContenu .highlight{
         font-size: 20px;}
-        
+
     button {
         width: 20%;
         padding: 15px;
