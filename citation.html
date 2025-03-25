@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ico_citation.jpg" type="image/x-icon">
+    <title>Générateur de citation</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header{
+            background-color: #121f1c50;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            padding: 10px;
+            margin: 5px 
+        }
+        button{
+            padding: 10px 20px;
+            background-color: #27bde2c7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            font-weight: 900;
+            letter-spacing: 1px;
+            left: 65%;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: #11f15c;
+            box-shadow: 2px 2px 5px 2px black;
+        }
+        p{
+            text-align: center;
+            font-size: 1.2em;
+            margin: 50px;
+            color: #696802;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #citation{
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Générateur de citation</h1>
+    </header>
+    <p id="citation">
+        <!-- Ici s'affichera la citation -->
+         J'ai réussi parce que j'ai beaucoup echoué dans mes projets mes j'ai persévéré et j'ai foi en mes compétences
+    </p>
+    <button onclick="generateurCitation()">CITATION </button>
+    
+</body>
+<script>
+    const citations=[
+        "La vie est un mystère qu'il faut vivre, et non un problème à résoudre.",
+        "Le plus grand risque est de ne prendre aucun risque.",
+        "Si vous voulez vivre une vie heureuse, attachez-la à un but, non pas à des personnes ou des choses.",
+        "Le succès c’est tomber sept fois, se relever huit.",
+        "Le seul endroit où le succès précède le travail, c’est dans le dictionnaire.",
+        "Le savoir est une arme", "La patience est la clé du succès",
+         "Rien ne sert de courir, il faut partir à point", "La persévérance triomphe toujours", 
+         "Apprendre, c’est grandir", "Chaque jour est une nouvelle opportunité",
+          "Le travail paie toujours", "La réussite appartient à ceux qui se lèvent tôt", 
+          "On ne naît pas génie, on le devient", "Fais de ta vie un rêve, et d’un rêve, une réalité"," La vie est un mystère qu’il faut vivre, et non un problème à résoudre. ",
+" Le succès, c’est tomber sept fois, se relever huit. ",
+" Fais de ta vie un rêve, et d’un rêve, une réalité. ",
+" L’échec est le fondement de la réussite. ",
+" Ils ne savaient pas que c’était impossible, alors ils l’ont fait. ",
+" La persévérance triomphe de tout. ",
+" Apprends d’hier, vis pour aujourd’hui, espère pour demain. ",
+" Le bonheur est la seule chose qui se double si on le partage. ",
+" La vie, c’est comme une bicyclette, il faut avancer pour ne pas perdre l’équilibre. ",
+" Ce n’est pas parce que les choses sont difficiles que nous n’osons pas, mais parce que nous n’osons pas qu’elles sont difficiles. ",
+" Le seul vrai échec est d’arrêter d’essayer. ",
+" La meilleure revanche est un énorme succès. ",
+" Le courage n’est pas l’absence de peur, mais la capacité de la vaincre. ",
+" Une journée sans rire est une journée perdue. ",
+" Chaque jour est une nouvelle chance de faire mieux. ",
+" On n’est jamais trop vieux pour se fixer un nouveau but. ",
+" La seule limite à notre épanouissement de demain, ce sont nos doutes d’aujourd’hui. ",
+" N’attends pas que l’orage passe, apprends à danser sous la pluie. ",
+" Croyez en vos rêves et ils se réaliseront peut-être. Croyez en vous et ils se réaliseront sûrement. ",
+" Si vous voulez aller vite, allez seul. Si vous voulez aller loin, allez ensemble. ",
+" Rien ne peut obscurcir la lumière qui brille de l’intérieur. ",
+" Les grandes choses ne sont pas réalisées par la force, mais par la persévérance. ",
+" Un voyage de mille lieues commence toujours par un premier pas. ",
+" Les seules limites sont celles que nous nous imposons. ",
+" L’imagination est plus importante que le savoir. ",
+" Agis toujours comme s’il était impossible d’échouer. ",
+" Les rêves donnent du travail. ",
+" On ne naît pas vainqueur, on le devient. ",
+" Les difficultés préparent les gens ordinaires à un destin extraordinaire. ",
+" Ce qui ne nous tue pas nous rend plus forts. ",
+" Fais ce que tu peux, avec ce que tu as, là où tu es. ",
+" La seule façon de faire un excellent travail est d’aimer ce que vous faites. ",
+" Ce que l’on conçoit bien s’énonce clairement. ",
+" Sois le changement que tu veux voir dans le monde. ",
+" Ce que tu fais aujourd’hui peut améliorer tous tes lendemains. ",
+" Il n’y a pas de vent favorable pour celui qui ne sait pas où il va. ",
+" La réussite appartient à ceux qui croient en la beauté de leurs rêves. ",
+" Seul celui qui tente l’absurde est capable d’atteindre l’impossible. ",
+" L’échec n’est qu’une opportunité de recommencer de manière plus intelligente. ",
+" Une idée ne vaut que si elle est réalisée. ",
+" Celui qui veut réussir trouve un moyen, celui qui ne veut rien faire trouve une excuse. ",
+" Apprends les règles comme un professionnel pour les briser comme un artiste. ",
+" La créativité, c’est l’intelligence qui s’amuse. ",
+" L’action est la clé fondamentale de tout succès. ",
+" Qui veut la paix prépare la guerre. ",
+" Les seules batailles perdues sont celles que l’on ne mène pas. ",
+" La vie, c’est 10% ce qui nous arrive et 90% la façon dont on y réagit. ",
+" L’expérience est le nom que chacun donne à ses erreurs. ",
+" L’espérance est le pilier du monde. ",
+" Rêve grand, commence petit, agis maintenant. ",
+" On ne change pas le monde en regardant, on le change en agissant. "];
+    function generateurCitation(){
+        let index= Math.floor(Math.random()*citations.length);
+        document.getElementById("citation").innerText=citations[index];
+    }
+</script>
+</html>
