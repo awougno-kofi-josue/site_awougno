@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         projets.forEach(projet => {
             projet.addEventListener("mouseover", function () {
                 this.style.transform = "scale(1.05)";
-                this.style.boxShadow = "2px 8px 10px rgb(12, 12, 12)";
+                this.style.boxShadow = "2px 2px 8px 8px rgb(12, 12, 12)";
             });
     
             projet.addEventListener("mouseout", function () {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let skills = document.querySelectorAll(".skill .progress");
         skills.forEach(skill => {
             skill.parentElement.addEventListener("mouseover", function () {
-                skill.style.backgroundColor = "rgba(4, 7, 5, 0.5)";
+                skill.style.backgroundColor = "rgba(8, 8, 8, 0.95)";
             });
     
             skill.parentElement.addEventListener("mouseout", function () {

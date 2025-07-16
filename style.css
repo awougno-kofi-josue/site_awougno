@@ -7,7 +7,7 @@ body{
     text-align: center;
     margin: 0;
     padding: 0; 
-    background-color: rgba(236, 247, 250, 0.767);
+    background-color: rgba(234, 241, 236, 0.418);
 }
 footer{
     text-align: center;
@@ -15,7 +15,8 @@ footer{
     margin: 5px 5px;
     padding: 5px 1px;
     background-color: rgba(59, 55, 59, 0.5);
-}header {
+}
+header {
     display: flex;
     justify-content: space-between; /* Profile à gauche, menu à droite */
     align-items: center;
@@ -52,8 +53,15 @@ nav ul {
 nav ul li {
     display: inline;
 }
+button:hover {
+    background-color: #14a9ee;
+    color: #ffffff;
+    cursor: pointer;
+}   
 nav ul a:hover{
+    border-bottom: 2px solid #14a9ee;
     color: #14a9ee;
+    cursor: pointer;
 }
 nav ul a {
     text-decoration: none;
@@ -72,8 +80,7 @@ nav ul a {
     display: flex;
     justify-content: space-between; 
     gap: 40px;
-    padding:3% 8%
-   
+    padding:3% 8% 
 }
 .sousContenu{
     display: flex;
@@ -104,7 +111,8 @@ nav ul a {
     box-shadow: 1px 1px 1px 1px;
     border: 1px solid #d6cbcb;
     border-radius: 10px;
-} .bouton:hover{
+}
+.bouton:hover{
     background-color: #14a9ee;
 }
 .bouton a{
@@ -160,13 +168,10 @@ nav ul a {
 .backgr {
     position: absolute;
     width: 80%;
-    height: 80%;
-    background-image: url(math_dev.jpg); 
-    filter: blur(40px); 
-    z-index: -1; }
+    height: 80%; 
+    }
 #contenu1{
     color: beige;
-
     color: rgb(8, 8, 8);
 }
 
@@ -185,7 +190,7 @@ nav ul a {
 }
 
 .project {
-    background: rgba(204, 198, 198, 0.4);
+    background: rgba(204, 198, 198, 0.253);
     padding: 15px;
     border-radius: 10px;
     margin: 10px 0;
