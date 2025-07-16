@@ -18,7 +18,7 @@ footer{
 }
 header {
     display: flex;
-    justify-content: space-between; /* Profile à gauche, menu à droite */
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
     background-color: rgba(95, 91, 95, 0.575);
@@ -27,8 +27,8 @@ header {
 .profile {
     color: rgba(7, 7, 248, 0.493);
     display: flex;
-    flex-direction: column; /* Met l'image au-dessus du nom */
-    align-items: center; /* Centre le contenu */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .profile img {
@@ -68,13 +68,12 @@ nav ul a {
     color: #ffffff;
     font-weight: normal;
 }
-/* Style du  main*/
+
 .contenu img {
     text-align: center;
     width: 400px;
     height: 50%;
     border-radius: 5%;
-    object-fit: cover;
 }
 .contenu{
     display: flex;
@@ -165,11 +164,11 @@ nav ul a {
     text-align: justify;
     font-weight: normal;
 }
-/*.backgr {
+.backgr {
     position: absolute;
     width: 80%;
     height: 80%; 
-    }*/
+    }
 #contenu1{
     
     color: rgb(8, 8, 8);
